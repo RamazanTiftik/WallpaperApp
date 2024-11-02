@@ -3,6 +3,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import HomeScreen from './screen/HomeScreen'
+import HomeStack from "./navigation/MyStackNavigation"
 
 //icons
 import AntDesign from "react-native-vector-icons/AntDesign"
@@ -44,8 +45,8 @@ const App = () => {
       }}>
 
         <Tab.Screen
-          name='HOME_SCREEN'
-          component={HomeScreen}
+          name='HOME_STACK'
+          component={HomeStack}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return <AntDesign

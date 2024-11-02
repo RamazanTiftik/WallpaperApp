@@ -2,11 +2,21 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import AntDesign from "react-native-vector-icons/AntDesign"
 import Feather from "react-native-vector-icons/Feather"
+import { useNavigation } from '@react-navigation/native'
 
 
 const ImageCard = ({ item }) => {
+
+  const navigation = useNavigation()
+
+  const handleNavigate = () => {
+    navigation.navigate("SHOW_WALLPAPER_SCREEN", {item})
+  }
+
   return (
-    <View style={styles.container} >
+    <TouchableOpacity onPress={() => {
+      handleNavigate(item)
+    }} style={styles.container} >
       <Image source={{ uri: item.image }} style={styles.converImage} />
       <View style={styles.iconContainer}>
 
@@ -19,7 +29,7 @@ const ImageCard = ({ item }) => {
         </TouchableOpacity>
 
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
  
@@ -31,8 +41,6 @@ const styles = StyleSheet.create({
         width: "50%",
         backgroundColor: "pink",
         margin: 8,
-        borderWidth: 1,
-        borderColor: "black",
         borderRadius: 20,
         overflow: "hidden",
         marginRight: 8,
@@ -43,7 +51,7 @@ const styles = StyleSheet.create({
     },
     iconContainer: {
         position: "absolute",
-        bottom: 10,
+        bottom: 12,
         right: 5,
         height: 80,
         justifyContent: "space-between"
