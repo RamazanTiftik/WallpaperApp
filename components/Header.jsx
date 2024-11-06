@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <View style={styles.container}>
       <Feather name={"menu"} color={"white"} size={30} />
-      <Image 
+      <Image
         source={require("../assets/favicon.png")}
         style={styles.appLogo}
       />
@@ -20,17 +20,17 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingVertical: 5,
-        borderBottomColor: "black",
-        borderBottomWidth: 1,
-        elevation: 10
-    },
-    appLogo: {
-        height: 60,
-        width: 60
-    }
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 5,
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    elevation: 10
+  },
+  appLogo: {
+    height: 60,
+    width: 60
+  }
 })

@@ -10,7 +10,7 @@ const ImageCard = ({ item }) => {
   const navigation = useNavigation()
 
   const handleNavigate = () => {
-    navigation.navigate("SHOW_WALLPAPER_SCREEN", {item})
+    navigation.navigate("SHOW_WALLPAPER_SCREEN", { item })
   }
 
   return (
@@ -20,42 +20,42 @@ const ImageCard = ({ item }) => {
       <Image source={{ uri: item.image }} style={styles.converImage} />
       <View style={styles.iconContainer}>
 
-        <TouchableOpacity onPress={() => {}}>
-            <AntDesign name={"hearto"} size={30} color="white" />
+        <TouchableOpacity onPress={() => { }}>
+          <AntDesign name={"hearto"} size={30} color="white" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {}}>
-            <Feather name={"download"} size={30} color="white" />
+        <TouchableOpacity onPress={() => { }}>
+          <Feather name={"download"} size={30} color="white" />
         </TouchableOpacity>
 
       </View>
     </TouchableOpacity>
   )
 }
- 
+
 export default ImageCard
 
 const styles = StyleSheet.create({
-    container: {
-        height: 300,
-        width: "50%",
-        backgroundColor: "pink",
-        margin: 8,
-        borderRadius: 20,
-        overflow: "hidden",
-        marginRight: 8,
-        marginVertical: 10
-    },
-    converImage: {
-        flex: 1
-    },
-    iconContainer: {
-        position: "absolute",
-        bottom: 12,
-        right: 5,
-        height: 80,
-        justifyContent: "space-between"
-    }
+  container: {
+    height: 300,
+    width: "50%",
+    backgroundColor: "pink",
+    margin: 8,
+    borderRadius: 20,
+    overflow: "hidden",
+    marginRight: 8,
+    marginVertical: 10
+  },
+  converImage: {
+    flex: 1
+  },
+  iconContainer: {
+    position: "absolute",
+    bottom: 12,
+    right: 5,
+    height: 80,
+    justifyContent: "space-between"
+  }
 })
 
 const imageUrl = ""

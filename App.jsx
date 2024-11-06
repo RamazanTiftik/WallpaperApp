@@ -3,12 +3,15 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import HomeScreen from './screen/HomeScreen'
-import HomeStack from "./navigation/MyStackNavigation"
+import { CollectionStack, HomeStack, SearchStack } from "./navigation/MyStackNavigation"
 
 //icons
 import AntDesign from "react-native-vector-icons/AntDesign"
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import { LinearGradient } from "expo-linear-gradient"
+import CollectionScreen from './screen/CollectionScreen'
+import SearchScreen from './screen/SearchScreen'
+
 
 
 const Tab = createBottomTabNavigator()
@@ -59,8 +62,8 @@ const App = () => {
         />
 
         <Tab.Screen
-          name='COLLECTIONS_SCREEN'
-          component={HomeScreen}
+          name='COLLECTIONS_STACK '
+          component={CollectionStack}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return <FontAwesome5 name={"th-large"} size={focused ? 40 : 30} color={color} />
@@ -69,8 +72,8 @@ const App = () => {
         />
 
         <Tab.Screen
-          name='SEARCH_SCREEN'
-          component={HomeScreen}
+          name='SEARCH_STACK'
+          component={SearchStack}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return <AntDesign name={"search1"} size={focused ? 40 : 30} color={color} />

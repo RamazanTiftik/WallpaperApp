@@ -11,11 +11,14 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.container} >
       <Header />
 
-      <FlatList 
-        data={data} 
-        renderItem={({item, index}) => <ImageCard item={item} index={index} />} 
-        numColumns={2} 
-        columnWrapperStyle={{justifyContent: "space-evenly", margin: 3}}
+      <FlatList
+        data={data}
+        renderItem={({ item, index }) => <ImageCard item={item} index={index} />}
+        numColumns={2}
+        columnWrapperStyle={{ justifyContent: "space-evenly", margin: 3 }}
+        contentContainerStyle={{
+          paddingBottom: 100
+        }}
       />
 
     </SafeAreaView>
